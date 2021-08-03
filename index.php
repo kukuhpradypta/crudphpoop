@@ -150,8 +150,6 @@ if(isset($_GET['hapus'])){
 <div class="container">
     <div class="col-12">
     <div class="py-3">
-    <h2>Data Warga</h2>
-        <a href="form-daftar.php" class='btn btn-success'>Tambah Data Warga</a>
     </div>
     <?php 
     if(isset($_POST['daftar'])){
@@ -170,35 +168,47 @@ if(isset($_GET['hapus'])){
     }
     
     ?>
-        <table class="table table-bordered" border=1>
-        <tr>
-            <td>No</td>
-            <td>No KTP</td>
-            <td>Nama Lengkap</td>
-            <td>Alamat</td>
-            <td>No HP</td>
-            <td>Action</td>
-        </tr>
-    <?php
-    $i=0;
-    foreach($data_warga as $data){ 
-        $i++;
-        ?>
-        <tr>
-            <td><?php echo $i; ?></td>
-            <td><?php echo $data['no_ktp']; ?></td>
-            <td><?php echo $data['nama_lengkap']; ?></td>
-            <td><?php echo $data['alamat_lengkap']; ?></td>
-            <td><?php echo $data['no_hp']; ?></td>
-            <td>
-                <a class="btn btn-warning" href="detail-warga.php?id=<?php echo $data['id']; ?>">detail</a> 
-            <a class="btn btn-danger" href="index.php?hapus=<?php echo $data['id']; ?>">Hapus</a>
-            </td>
-        </tr>
-    <?php } ?>
-    </table>
-    </div>
-</div>
+   <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <a href="form-daftar.php" class='btn btn-success'><i class="fas fa-user-plus"></i>Tambah data warga</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                         <tr>
+                                           <th>No</th>
+                                            <th>No KTP</th>
+                                            <th>Nama Lengkap</th>
+                                            <th>Alamat</th>
+                                            <th>No HP</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                        <?php
+                                        $i=0;
+                                        foreach($data_warga as $data){ 
+                                            $i++;
+                                            ?>
+                                    <tbody>
+                                        <tr>
+                                            <td><?php echo $i; ?></td>
+                                            <td><?php echo $data['no_ktp']; ?></td>
+                                            <td><?php echo $data['nama_lengkap']; ?></td>
+                                            <td><?php echo $data['alamat_lengkap']; ?></td>
+                                            <td><?php echo $data['no_hp']; ?></td>
+                                            <td class="text-center">
+                                                <a class="btn btn-warning btn-sm" href="detail-warga.php?id=<?php echo $data['id']; ?>"><i class="fas fa-info-circle"></i></a> 
+                                            <a class="btn btn-danger btn-sm" href="index.php?hapus=<?php echo $data['id']; ?>"><i class="fas fa-trash"></i></a>
+                                            <a class="btn btn-primary btn-sm" href="edit.php?id=<?php echo $data['id']; ?>"><i class="fas fa-edit"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                     <?php } ?>
+                                        </table>
+                            </div>
+                        </div>
+                    </div>
 
     
         </div>

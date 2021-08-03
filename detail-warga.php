@@ -129,39 +129,41 @@ $data=$Db->get_by_id($idwarga);
                 <!-- End of Topbar -->
         <div id="content">
         <div class="container">
-                <div class="row">
-        <div class="col-md-8">
-        <h2>Form Detail Registrasi Warga</h2>
-        <hr>
-        <table class="table table-striped table-bordered">
-            <tr>
-                <td>No ID</td>
-                <td><?php echo $data['id']; ?></td>
-            </tr>
-            <tr>
-                <td>No KTP</td>
-                <td><?php echo $data['no_ktp']; ?></td>
-            </tr>
-            <tr>
-                <td>Nama Lengkap</td>
-                <td><?php echo $data['nama_lengkap']; ?></td>
-            </tr>
-            <tr>
-                <td>Alamat Lengkap</td>
-                <td><?php echo $data['alamat_lengkap']; ?></td>
-            </tr>
-            <tr>
-                <td>Nomor HP</td>
-                <td><?php echo $data['no_hp']; ?></td>
-            </tr>
-            <tr>
-                <td><a href="index.php" class="btn btn-primary">Kembali</a></td>
-                <td></td>
-            </tr>
-        </table>
-
-        </div>
-    </div>
+   <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h3 class="m-0 font-weight-bold text-primary">Detail Warga</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    
+                                    <tbody>
+                                         <tr>
+                                        <td>No ID</td>
+                                        <td><?php echo $data['id']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>No KTP</td>
+                                        <td><?php echo $data['no_ktp']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nama Lengkap</td>
+                                        <td><?php echo $data['nama_lengkap']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alamat Lengkap</td>
+                                        <td><?php echo $data['alamat_lengkap']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nomor HP</td>
+                                        <td><?php echo $data['no_hp']; ?></td>
+                                    </tr>
+                                    </tbody>
+                                        </table>
+                                        <a href="index.php" class="btn btn-primary">Kembali</a>
+                            </div>
+                        </div>
+                    </div>
         </div>
 </div>
 

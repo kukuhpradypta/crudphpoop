@@ -149,45 +149,44 @@ if($querysimpan == TRUE){
                 <!-- End of Topbar -->
         <div id="content">
         <div class="container">
-            <div class="row">
-        <div class="col-md-8">
-        <h2>Form Registrasi Warga</h2>
-        <hr>
-        <form action="" method="post">
-        <table class="table table-bordered">
-            <tr>
+        <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h3 class="m-0 font-weight-bold text-primary">Form Daftar</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                 <form action="" method="post">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    
+                                    <tbody>
+                                         <tr>
                 <th colspan="2">Biodata Pribadi</th>
                 
             </tr>
             <tr>
                 <td>Nomor KTP</td>
-                <td> <input class="form-group" type="text" name="no_ktp" id="no_ktp"></td>
+                <td> <input class="form-group col-12" type="text" name="no_ktp" id="no_ktp"></td>
             </tr>
             <tr>
                 <td>Nama Lengkap</td>
-                <td><input class="form-group" type="text" name="nama_lengkap" id="nama_lengkap"></td>
+                <td><input class="form-group col-12" type="text" name="nama_lengkap" id="nama_lengkap"></td>
             </tr>
             <tr>
                 <td>Alamat Lengkap</td>
-                <td> <input class="form-group" type="text" name="alamat_lengkap" id="alamat_lengkap"></td>
+                <td> <input class="form-group col-12" type="text" name="alamat_lengkap" id="alamat_lengkap"></td>
             </tr>
             <tr>
                 <td>Nomor HP</td>
-                <td><input class="form-group" type="text" name="no_hp" id="no_hp"></td>
+                <td><input class="form-group col-12" type="text" name="no_hp" id="no_hp"></td>
             </tr>
-            <tr>
-                <td colspan="2"> <button class="btn btn-success" name="daftar" type="submit">Daftar </button></td>
-                
-            </tr>
-        </table>
-      
-       
-        </form>
-
+                </tbody>
+                    </table>
+                    <button class="btn btn-primary" name="daftar" type="submit">Daftar </button>
+                </form>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-        </div>
-</div>
 
   
     <!-- Bootstrap core JavaScript-->
